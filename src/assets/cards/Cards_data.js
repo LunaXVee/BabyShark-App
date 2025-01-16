@@ -16,19 +16,19 @@ import card_img14 from './card14.jpg';
 const cards_data = [
     {
         image:card_img1,
-        name:"Kung Fu Panda"
+        name:"Monsters Inc"
     },
     {
         image:card_img2,
-        name:"Squid Game"
+        name:"Shrek 2"
     },
     {
         image:card_img3,
-        name:"Squid Challange"
+        name:"Hotel Transilvania"
     },
     {
         image:card_img4,
-        name:"Jawan"
+        name:"Gravity Falls"
     },
     {
         image:card_img5,

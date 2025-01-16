@@ -16,16 +16,16 @@ const Navbar = () => {
         <img src={shark_logo} alt="" className="shark-logo" />
         <ul>
           <li>Home</li>
-          <li>TV Shows</li>
           <li>Movies</li>
+          <li>Disney Shows</li>
+          <li>Anime</li>
           <li>New and Popular</li>
           <li>My List</li>
-          <li>Browse by Language</li>
         </ul>
       </div>
       <div className="navbar-right">
         <img src={search_icon} alt="" className='icons'/>
-        <p>Children</p>
+        <p>Category</p>
         <img src={bell_icon} alt="" className='icons'/>
         <div className="navbar-profile">
         <img src={squid_icon} alt="" className='profile'/>

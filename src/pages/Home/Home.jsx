@@ -21,7 +21,7 @@ const Home = () => {
         <img src={phineas} alt="" className='banner-img' />
         <div className="hero-caption">
           <img src={hero_title} alt="" className='caption-img' />
-          <p>Seven brave pups go on a journey discovering their ties to a secret space base, Clover embarks on a quest to save his friends as the city is raided by aliens</p>
+          <p>As the four boys embark on a journey discovering their ties to a secret space base, Phineas and Ferb must come to terms with the fact that nothing will ever be the same again</p>
           <div className="hero-btns">
             <button className='btn' ><img src={play_icon} alt="" />Play</button>
             <button className='btn dark-btn'><img src={info_icon} alt="" />More Info</button>
