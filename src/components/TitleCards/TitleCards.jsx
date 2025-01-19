@@ -4,7 +4,7 @@ import cards_data from '../../assets/cards/Cards_data' //will allow us to access
 
 
 
-const TitleCards = () => { //create an object named titlecards
+const TitleCards = ({title, category}) => { //create an object named titlecards
 
   const cardsRef = useRef(); //imports from react package to control how the scrolling works
 const handlewheel = (event)=>{
@@ -19,7 +19,7 @@ useEffect(()=>{
 
   return (
     <div className='title-cards'> 
-    <h2>Popular on Netflix</h2>
+    <h2>{title?title: "New Releases"}</h2>
     <div className="card-list" ref={cardsRef}>
       {cards_data.map((card, index)=>{ //creates an index list of all items under cardsdata
         return <div className="card" key={index}>

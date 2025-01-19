@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Unbounded:wght@200..900&display=swap');
+
 .hero{
     position: relative;
 }
@@ -15,6 +17,13 @@
     padding-left: 6%;
     bottom: 0; /*fits everything nice at the bottom and on top of the image*/
 }
+
+.hero-caption h2{
+    font-size: 40px;
+    font-family: "Unbounded", serif;
+    text-transform: capitalize;
+}
+
 
 .caption-img {
     width: 100%;
@@ -38,20 +47,23 @@
 
 .hero-btns .btn img {
     width: 25px;
+    color: #fff;
 }
 
 .hero-btns .btn  {
     border: 0;
     outline: 0;
-    padding: 8px 20px;
+    padding: 12px 23px;
     display: inline-flex;
     align-items: center;
     gap: 10px;
     font-size: 15px;
     font-weight: 600;
-    background: white;
-    border-radius: 4px;
+    background: #7c3aed;
+    color: #fff;
+    border-radius: 22px;
     cursor: pointer;
+
 } 
 
 .hero-btns .btn.dark-btn {
@@ -65,4 +77,8 @@
 
 .hero-btns .btn.dark-btn:hover {
     background: #6d6d6e66;
+}
+
+.more-cards {
+    padding-left: 6%;
 }

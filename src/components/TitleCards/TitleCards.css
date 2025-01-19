@@ -5,6 +5,9 @@
 
 .title-cards h2{
     margin-bottom: 8px;
+    font-family: poppins;
+    font-size: 24px;
+    font-weight: 120;
 }
 
 .card-list{

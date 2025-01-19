@@ -19,14 +19,14 @@ const Navbar = () => {
           <li>Movies</li>
           <li>Disney Shows</li>
           <li>Anime</li>
-          <li>New and Popular</li>
+          {/*<li>New and Popular</li>>*/}
           <li>My List</li>
         </ul>
       </div>
       <div className="navbar-right">
         <img src={search_icon} alt="" className='icons'/>
-        <p>Category</p>
-        <img src={bell_icon} alt="" className='icons'/>
+        {/*<p>Category</p>*/}
+        {/*<img src={bell_icon} alt="" className='icons'/>*/}
         <div className="navbar-profile">
         <img src={squid_icon} alt="" className='profile'/>
         <img src={caret_icon} alt=""/>
