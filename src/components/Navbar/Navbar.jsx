@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect, useRef } from 'react'
 import './Navbar.css'
 import shark_logo from "../../assets/shark_logo.png"
 import search_icon from "../../assets/search_icon.svg"
@@ -10,8 +10,22 @@ import squid_icon from "../../assets/squid_icon.png"
 
 
 const Navbar = () => {
+
+  const navRef = useRef(); {/*creating a back background when you scroll*/} 
+
+  useEffect(()=>{
+    window.addEventListener('scroll', ()=>{
+      if(window.scrollY >= 80){
+        navRef.current.classList.add('nav-dark')
+      } else {
+        navRef.current.classList.remove('nav-dark')
+
+      }
+    })
+  },[])
+
   return (
-    <div className='navbar'>
+    <div ref={navRef} className='navbar'>
       <div className="navbar-left">
         <img src={shark_logo} alt="" className="shark-logo" />
         <ul>
