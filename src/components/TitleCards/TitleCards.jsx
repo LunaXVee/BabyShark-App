@@ -1,5 +1,6 @@
 import React, { useEffect, useRef, useState } from 'react'
 import './TitleCards.css'
+import { Link } from 'react-router-dom';
 
 const TitleCards = ({title, category}) => {
   const [apiData, setApiData] = useState([]);
@@ -15,7 +16,8 @@ const TitleCards = ({title, category}) => {
 
   const handlewheel = (event) => {
     event.preventDefault();
-    cardsRef.current.scrollLeft += event.deltaY;
+    const scrollSpeed = 100; // Adjust this value to control scroll speed
+    cardsRef.current.scrollLeft += event.deltaY< 0 ? -scrollSpeed : scrollSpeed;
   }
 
   useEffect(() => {
@@ -33,10 +35,10 @@ const TitleCards = ({title, category}) => {
         apiUrl = 'https://api.themoviedb.org/3/discover/movie?with_genres=16,10751&sort_by=popularity.desc';
         break;
       case 'now_playing':
-        apiUrl = 'https://api.themoviedb.org/3/movie/now_playing';
+        apiUrl = 'https://api.themoviedb.org/3/movie/now_playing?';
         break;
       default:
-        apiUrl = 'https://api.themoviedb.org/3/movie/now_playing';
+        apiUrl = 'https://api.themoviedb.org/3/movie/now_playing?';
     }
 
     // Add common query parameters
@@ -77,13 +79,13 @@ const TitleCards = ({title, category}) => {
       <div className="card-list" ref={cardsRef}>
         {apiData && apiData.length > 0 ? (
           apiData.map((card, index) => (
-            <div className="card" key={index}>
+            <Link to={`/player/${card.id}`} className="card" key={index}>
               <img 
                 src={card.backdrop_path ? `https://image.tmdb.org/t/p/w500${card.backdrop_path}` : 'placeholder-image-url'} 
                 alt={card.original_title || 'Movie poster'} 
               />  
               <p>{card.original_title}</p>
-            </div>
+            </Link>
           ))
         ) : (
           <div>Loading...</div>

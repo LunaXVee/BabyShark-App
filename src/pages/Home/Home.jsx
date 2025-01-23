@@ -42,9 +42,9 @@ const Home = () => {
         </div>
       </div>
       <div className="more-cards">
-        <TitleCards title="Disney Animated Movies _____________________________" category="animation" />
-        <TitleCards title="Anime Movies _________________________________________" category="anime" />
-        <TitleCards title="Family Animation _____________________________________" category="family_animation" />
+        <TitleCards title="Disney Animated Movies " category="animation" />
+        <TitleCards title="Anime Movies " category="anime" />
+        <TitleCards title="Family Animation " category="family_animation" />
         <TitleCards title="New Releases" category="now_playing" />
       </div>
       <Footer/>

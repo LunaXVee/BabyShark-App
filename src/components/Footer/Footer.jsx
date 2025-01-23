@@ -17,20 +17,14 @@ const Footer = () => {
 
       </div>
       <ul>
-        <li>Audio Description</li>
         <li>Help Centre</li>
         <li>Gift Cards</li>
-        <li>Media Center</li>
-        <li>Investor Relation</li>
-        <li>Jobs</li>
         <li>Terms of Use</li>
-        <li>Privacy</li>
-        <li>Legal Notice</li>
-        <li>Cookie Preferences</li>
+        <li>Privacy & Cookies</li>
         <li>Corporate Information</li>
         <li>Contact Us</li>
       </ul>
-      <p className='copyright-text'>©2024-2025 BabyShark, Inc.</p>
+      <p className='copyright-text'>© 2024-2025 BabyShark, Inc.</p>
 
       
     </div>

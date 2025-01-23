@@ -7,8 +7,10 @@
     margin-bottom: 8px;
     font-family: "Unbounded", serif;  /* Using the same font as your hero title */
     font-size: 24px;
-    font-weight: 300;
+    font-weight: 400;
     padding-bottom: 20px;
+    color: #0FC3D7;
+    text-transform: uppercase;
 
 }
 
@@ -16,13 +18,16 @@
     display: flex; 
     gap: 10px;
     overflow-x: scroll; /*makes the list scrollable*/
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch; /* For smoother scrolling on iOS */
+    scrollbar-width: none; /* Firefox */
 }
 .card-list::-webkit-scrollbar{ /*hides scroll bar*/
     display: none;
 }
 
 .card-list img{
-    width: 240px;
+    width: 370px;
     border-radius: 4px;
     cursor: pointer;
 }
@@ -57,7 +62,8 @@
     left: 10px;  /* Changed from right to left for better readability */
     color: white;  /* Ensure text is visible on dark overlay */
     z-index: 1;  /* Place text above the gradient */
-    font-size: 14px;
-    font-weight: 500;
+    font-size: 17px;
+    font-weight: 300;
+    font-family: Poppins;
 }
 
