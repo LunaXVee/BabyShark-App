@@ -19,7 +19,6 @@ const Navbar = () => {
         navRef.current.classList.add('nav-dark')
       } else {
         navRef.current.classList.remove('nav-dark')
-
       }
     })
   },[])
@@ -28,7 +27,9 @@ const Navbar = () => {
     <div ref={navRef} className='navbar'>
       <div className="navbar-left">
         <img src={shark_logo} alt="" className="shark-logo" />
-        <ul>
+        </div>
+
+        <ul className="nav-items">
           <li>Home</li>
           <li>Movies</li>
           <li>Disney Shows</li>
@@ -36,7 +37,7 @@ const Navbar = () => {
           {/*<li>New and Popular</li>>*/}
           <li>My List</li>
         </ul>
-      </div>
+
       <div className="navbar-right">
         <img src={search_icon} alt="" className='icons'/>
         {/*<p>Category</p>*/}
@@ -48,11 +49,12 @@ const Navbar = () => {
         <div className="dropdown">
           <p>Sign Out</p>
         </div>
-        </div>
+     </div>
 
       </div>
     </div>
   )
 }
+
 
 export default Navbar

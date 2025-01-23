@@ -16,7 +16,7 @@ const TitleCards = ({title, category}) => {
 
   const handlewheel = (event) => {
     event.preventDefault();
-    const scrollSpeed = 100; // Adjust this value to control scroll speed
+    const scrollSpeed = 1000; // Adjust this value to control scroll speed
     cardsRef.current.scrollLeft += event.deltaY< 0 ? -scrollSpeed : scrollSpeed;
   }
 

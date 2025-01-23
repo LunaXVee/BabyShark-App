@@ -9,7 +9,7 @@
     font-size: 24px;
     font-weight: 400;
     padding-bottom: 20px;
-    color: #0FC3D7;
+    color: #ffff;
     text-transform: uppercase;
 
 }
@@ -18,9 +18,11 @@
     display: flex; 
     gap: 10px;
     overflow-x: scroll; /*makes the list scrollable*/
+    -webkit-overflow-scrolling: touch; /*
+For smoother scrolling on iOS */
     scroll-behavior: smooth;
-    -webkit-overflow-scrolling: touch; /* For smoother scrolling on iOS */
     scrollbar-width: none; /* Firefox */
+
 }
 .card-list::-webkit-scrollbar{ /*hides scroll bar*/
     display: none;
@@ -67,3 +69,17 @@
     font-family: Poppins;
 }
 
+
+.card {
+    transition: transform 0.3s ease;
+ }
+ 
+ .card:hover {
+    transform: scale(1.2);
+    z-index: 1;
+ }
+ 
+ /* Optional: Add shadow on hover */
+ .card:hover img {
+    box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+ }

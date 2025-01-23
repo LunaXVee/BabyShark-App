@@ -2,12 +2,27 @@ import React, { useState } from 'react'
 import './Login.css'
 import logo from '../../assets/logo.png'
 import shark_logo from "../../assets/shark_logo.png"
+import { login, signup } from '../../firebase'
 
 
 const Login = () => {
 
-  const [signState, setSignState] = useState("Sign In") /*create a sign state variable that allows you to switch from sign up to sign in*/ 
+  const [signState, setSignState] = useState("Sign In"); /*create a sign state variable that allows you to switch from sign up to sign in*/ 
 
+  //create a state variable that allows us to save the forms data
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+
+  //create function for user authenication
+  const userAuth = async (event)=>{
+    event.preventDefault(); //dont reload when we submit
+    if(signState==="Sign In"){
+      await login(email, password);
+    }else{
+      await signup(name, email, password);
+    }
+  }
 
   return (
     <div className='login'>
@@ -18,11 +33,22 @@ const Login = () => {
 
         <h1>{signState}</h1>
         <form>
-          {signState==="Sign Up"? <input type="text" placeholder="Your Name"/>: <></>}           {/*create a terinary so that only signup asks for name */}
+          {signState==="Sign Up"? <input
+           value={name} onChange={(e)=>{setName(e.target.value)}} 
+           
+           type="text" placeholder="Your Name"/>: <></>}           {/*create a terinary so that only signup asks for name */}
 
-          <input type="text" placeholder="Email" />
-          <input type="text" placeholder="Password" />
-          <button>{signState}</button>
+          <input 
+          value={email} onChange={(e)=>{setEmail(e.target.value)}} 
+          type="text" placeholder="Email" />
+
+          <input 
+          value={password} onChange={(e)=>{setPassword(e.target.value)}} 
+          type="password" placeholder="Password" />
+
+          <button onClick={userAuth} type='submit'>{signState}</button> {/*connect with auth function */}
+
+
           <div className="form-help">
             <div className="remember">
               <input type="checkbox" />
