@@ -3,6 +3,7 @@ import './Login.css'
 import logo from '../../assets/logo.png'
 import shark_logo from "../../assets/shark_logo.png"
 import { login, signup } from '../../firebase'
+import blue_load from '../../assets/blue-load.gif'
 
 
 const Login = () => {
@@ -13,18 +14,30 @@ const Login = () => {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const [loading, setLoading] = useState(false); //initiate loading screen
 
   //create function for user authenication
   const userAuth = async (event)=>{
     event.preventDefault(); //dont reload when we submit
+
+    setLoading(true);
+
     if(signState==="Sign In"){
       await login(email, password);
     }else{
       await signup(name, email, password);
     }
+
+    setLoading(false);
+
   }
 
   return (
+
+    loading? <div className="login-spinner">   
+      <img src={blue_load} alt="" />
+    </div>:
+
     <div className='login'>
             <img src={shark_logo} className='login-logo' alt="" />
 
