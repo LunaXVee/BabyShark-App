@@ -15,7 +15,11 @@
 }
 
 .shark-logo {
-    width: 40%; 
+    width: 150px;
+    height: auto;
+    min-width: 150px;
+    min-height: 40px;
+    object-fit: contain;
 }
 
 .navbar-left {
@@ -106,3 +110,33 @@
     background: rgb(14, 17, 38);
     
 }
+
+@media (max-width: 800px) {
+    .navbar{
+        padding: 20px 4%;
+    }
+    .nav-items{
+        display: none;
+    }
+    .navbar img{
+        height: 25px;
+    }
+    
+}
+
+@media (max-width: 500px) {
+    .navbar img{
+        height: 20px;
+    }
+    .navbar-right{
+        gap: 10px;
+    }
+    
+}
+
+@media (max-width: 800px) {
+    .shark-logo {
+        width: 150px; /* Force same width at small screens */
+        min-width: 150px;
+    }
+ }
